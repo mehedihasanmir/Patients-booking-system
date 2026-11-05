@@ -16,8 +16,18 @@ from bytevoice_agent.nusrat import CallRuntime, Nusrat, bind_session
 logger = logging.getLogger("bytevoice.agent")
 
 
+def _load_vad():
+    wanted = {
+        "min_speech_duration": 0.25,
+        "min_silence_duration": 0.55,
+        "activation_threshold": 0.6,
+    }
+    params = inspect.signature(silero.VAD.load).parameters
+    return silero.VAD.load(**{key: value for key, value in wanted.items() if key in params})
+
+
 def prewarm(proc: JobProcess) -> None:
-    proc.userdata["vad"] = silero.VAD.load()
+    proc.userdata["vad"] = _load_vad()
 
 
 def _try(factory, variants: list[dict[str, Any]]):
@@ -32,13 +42,6 @@ def _try(factory, variants: list[dict[str, Any]]):
     raise RuntimeError("no constructor variant")
 
 
-_STT_PROMPT = (
-    "Dental clinic phone call. The caller speaks Bangla and sometimes English medical words. "
-    "Transcribe Bangla in Bangla. Keep these English words as spoken: "
-    "appointment, scaling, root canal, filling, braces, extraction, doctor, check-up."
-)
-
-
 def _build_stt(settings):
     providers = []
     if settings.stt_provider in {"auto", "openai"}:
@@ -48,7 +51,6 @@ def _build_stt(settings):
             _try(
                 openai.STT,
                 [
-                    {"model": model, "language": language, "prompt": _STT_PROMPT},
                     {"model": model, "language": language},
                     {"model": "whisper-1", "language": language},
                 ],
@@ -123,7 +125,7 @@ def _session_kwargs(settings, proc: JobProcess) -> dict[str, Any]:
         "stt": _build_stt(settings),
         "llm": _build_llm(),
         "tts": _build_tts(settings),
-        "vad": proc.userdata.get("vad") or silero.VAD.load(),
+        "vad": proc.userdata.get("vad") or _load_vad(),
         "allow_interruptions": True,
         "min_endpointing_delay": 0.35,
         "max_endpointing_delay": 1.2,
