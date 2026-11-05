@@ -1,0 +1,8 @@
+{
+  "name": "bytevoice-bangla",
+  "private": true,
+  "scripts": {
+    "dev:web": "npm run dev --prefix apps/web",
+    "lint:web": "npm run lint --prefix apps/web"
+  }
+}

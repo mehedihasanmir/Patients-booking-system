@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "title": "StrategyByte Dental Care — Dhanmondi",
+    "description": "StrategyByte Dental Care, Dhanmondi. Talk to Nusrat in Bangla and book a visit."
+  },
+  "nav": { "brand": "StrategyByte", "portal": "Portal", "contact": "Contact", "language": "বাংলা" },
+  "hero": {
+    "kicker": "A Bangla voice agent for clinics in Bangladesh",
+    "title": "Patients book even when the front desk is busy",
+    "sub": "Nusrat answers in Bangla, then books, reschedules, or cancels. Staff see every call afterwards.",
+    "body": "For dental clinics and hospital front desks. She takes missed calls, after-hours questions, and the same enquiries all day. She does not give medical advice.",
+    "cta": "Talk to our Bangla caller",
+    "secondary": "How it works"
+  },
+  "problem": {
+    "title": "Where the front desk drops calls",
+    "items": [
+      { "title": "Missed calls", "body": "Busy hours mean a ringing phone and a patient who books somewhere else." },
+      { "title": "After hours", "body": "Friday and after 8pm, nobody is there to take a booking." },
+      { "title": "Paper booking", "body": "Names, numbers, and times live in a notebook." },
+      { "title": "Reception load", "body": "The same questions, all day: hours, address, fees, which doctor." },
+      { "title": "The same questions", "body": "Address, fees, which doctor — patients ask all day." }
+    ]
+  },
+  "how": {
+    "title": "Three steps",
+    "steps": [
+      { "title": "The patient talks", "body": "They turn the microphone on and say, in Bangla, why they want to come in." },
+      { "title": "Nusrat confirms", "body": "She checks open times and reads them back. The seat is kept only after they say yes." },
+      { "title": "Staff see it in the portal", "body": "The call, transcript, name, number, and seat stay in one place." }
+    ]
+  },
+  "features": {
+    "title": "What the clinic actually needs",
+    "items": [
+      { "title": "Bangla and code-switching", "body": "scaling, root canal, doctor — kept in English the way Dhaka says them." },
+      { "title": "Book, move, cancel", "body": "Look up by mobile number, then move or cancel the slot." },
+      { "title": "FAQ", "body": "Hours, directions, services, fees, preparation — only from the clinic record." },
+      { "title": "Human handover", "body": "A callback when she is unsure. Emergency signs go to hospital, then an urgent callback." },
+      { "title": "Your name and number", "body": "She repeats them so the seat is not written down wrong." },
+      { "title": "A reminder later", "body": "The booked seat stays at the clinic, so they can remind you before the day." }
+    ]
+  },
+  "usecases": {
+    "title": "Where it sits",
+    "items": ["Dental clinics", "Diagnostic centres", "Hospital outpatients", "Reminder calls"]
+  },
+  "stats": {
+    "items": [
+      { "value": "10–8", "label": "Sat–Thu, until 8pm" },
+      { "value": "30 min", "label": "Every slot" },
+      { "value": "3", "label": "Doctors, three specialties" },
+      { "value": "Dhaka", "label": "Asia/Dhaka clock" }
+    ]
+  },
+  "faq": {
+    "title": "Questions",
+    "items": [
+      { "q": "Does she give medical advice?", "a": "No. Nusrat books and reads clinic facts. She does not diagnose or name medicines." },
+      { "q": "Can I book on Friday?", "a": "No. Fridays and holidays are closed. Hours are 10:00–20:00." },
+      { "q": "Can the clinic see what I said?", "a": "Yes. After the call, your name, number, and seat are with the front desk." },
+      { "q": "How do I talk to her?", "a": "Press the button on this page, allow the microphone, and speak in Bangla." }
+    ]
+  },
+  "contact": {
+    "title": "Write to the clinic",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "clinic": "Clinic name",
+    "message": "What do you want to see",
+    "submit": "Send",
+    "success": "Received. The clinic will look at your note."
+  },
+  "footer": { "blurb": "StrategyByte Dental Care, Dhanmondi. Nusrat is at reception." },
+  "call": {
+    "idle": "Turn the microphone on and talk to Nusrat.",
+    "mic": "Asking for the microphone…",
+    "connecting": "Calling Nusrat…",
+    "live": "Live",
+    "ended": "Thank you. The clinic has what you said. If a seat was booked, the desk will keep that time.",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "end": "End call",
+    "retry": "Try again",
+    "you": "You",
+    "agent": "Nusrat",
+    "listening": "Listening",
+    "speaking": "Speaking",
+    "waiting": "Waiting",
+    "transcript": "Conversation",
+    "resize": "Transcript height",
+    "portal": "Open the portal",
+    "errors": {
+      "micDenied": "The microphone is blocked. Use the lock icon in the address bar to allow it, then try again.",
+      "noMic": "No microphone was found.",
+      "network": "The connection failed. Check the network and try again.",
+      "agentTimeout": "Nusrat could not join just now. Please try again in a moment.",
+      "rateLimited": "Too many tries in one minute. Wait a moment.",
+      "quota": "Calls are not available right now. Please try again shortly.",
+      "notConfigured": "The call cannot connect right now. Please try again in a moment.",
+      "generic": "The call could not start."
+    }
+  },
+  "portalNav": {
+    "dashboard": "Dashboard",
+    "calls": "Calls",
+    "appointments": "Appointments",
+    "patients": "Patients",
+    "callbacks": "Callbacks",
+    "model": "Data model",
+    "brand": "StrategyByte",
+    "logout": "Log out"
+  },
+  "login": {
+    "brand": "StrategyByte",
+    "title": "Staff",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign in",
+    "hint": "Sign in with your clinic staff account.",
+    "failed": "Email or password did not match."
+  },
+  "dash": {
+    "calls": "Total calls",
+    "booked": "Booked",
+    "duration": "Avg duration",
+    "callbacks": "Open callbacks",
+    "chart": "Calls per day",
+    "empty": "Nothing here yet."
+  },
+  "calls": {
+    "search": "Name or phone",
+    "status": "Status",
+    "all": "All",
+    "from": "From",
+    "to": "To",
+    "review": "Needs review",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "detail": {
+    "fields": "Extracted fields",
+    "appointment": "Appointment",
+    "summary": "Summary",
+    "transcript": "Transcript",
+    "bangla": "Bangla",
+    "english": "English",
+    "raw": "Raw JSON",
+    "save": "Save",
+    "saved": "Saved",
+    "confidence": "Confidence",
+    "review": "Please check these details again",
+    "none": "Not yet",
+    "nameBn": "Name (Bangla)",
+    "nameEn": "Name (English)",
+    "phone": "Phone",
+    "reason": "Reason",
+    "date": "Date",
+    "window": "Time window"
+  }
+}

@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-sans: "Avenir Next", "Segoe UI", sans-serif;
+  --font-bn: "Nirmala UI", "Noto Sans Bengali", "SolaimanLipi", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(900px 420px at 90% -10%, rgba(15, 110, 104, 0.16), transparent 55%),
+    linear-gradient(180deg, #f7f4ef 0%, #f3f7f6 40%, #eef3f2 100%);
+  color: #102421;
+}
+
+.bn {
+  font-family: var(--font-bn);
+}
+
+::selection {
+  background: #0f6e68;
+  color: white;
+}
+
+@keyframes nusrat-blink {
+  0%,
+  42%,
+  46%,
+  100% {
+    transform: scaleY(1);
+  }
+  44% {
+    transform: scaleY(0.06);
+  }
+}
+
+.nusrat-blink {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nusrat-blink 4.6s infinite;
+}
+
+.nusrat-blink-late {
+  animation-delay: 0.04s;
+}
+
+@keyframes nusrat-breath {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(2px) scale(1.012);
+  }
+}
+
+.nusrat-breath {
+  animation: nusrat-breath 4.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
