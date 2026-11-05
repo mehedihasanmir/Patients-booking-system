@@ -6,7 +6,7 @@ The demo has to be a browser call a reviewer can start from the landing page. Li
 
 ## OpenAI STT for Bangla, Google bn-BD behind it
 
-Deepgram is not available in every region, so the live transcript uses OpenAI `gpt-4o-mini-transcribe` with `language=bn` and the same `OPENAI_API_KEY` as the receptionist model. A short prompt tells it to keep English clinic words (scaling, root canal, appointment) in English. Google `bn-BD` is the fallback when a key exists, via LiveKit's `FallbackAdapter` when that class is present. It is not silently pretended to be on if `GOOGLE_APPLICATION_CREDENTIALS` is empty. `STT_PROVIDER=deepgram` still selects Nova-3, but that plugin is not installed by default.
+Deepgram is not available in every region, so the live transcript uses OpenAI `gpt-4o-mini-transcribe` with `language=bn` and the same `OPENAI_API_KEY` as the receptionist model. No instruction prompt is sent to the transcriber. On a quiet room that prompt was spoken back as if the caller had said it. English clinic words stay in English because the receptionist model is told to keep them, not because the transcriber is primed with a sentence. Silero ignores clips shorter than 0.25s and needs a higher activation threshold, so a fan or a cough is less likely to become a fake sentence. Google `bn-BD` is only added when `GOOGLE_APPLICATION_CREDENTIALS` points at a real service account. An empty or fake path used to crash the worker at job start. Production sets `STT_PROVIDER=openai` and leaves that variable unset.
 
 ## OpenAI TTS for the voice
 
